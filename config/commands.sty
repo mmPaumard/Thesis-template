@@ -1,0 +1,44 @@
+\ProvidesPackage{commands}
+
+% Own commands
+\newcommand*{\publititle}{\color{tyrianpurple}\itshape}
+
+% Sections
+\renewcommand{\thechapter}{\oldstylenums{\arabic{chapter}}}
+\renewcommand{\thesection}{\thechapter.\oldstylenums{\arabic{section}}}
+\renewcommand{\thesubsection}{\thesection.\oldstylenums{\arabic{subsection}}}
+
+\renewcommand{\thefigure}{\thechapter.\oldstylenums{\arabic{figure}}}
+\renewcommand{\thetable}{\thechapter.\oldstylenums{\arabic{table}}}
+\renewcommand{\theequation}{\thechapter.\oldstylenums{\arabic{equation}}}
+
+% Caps and smallcaps, specification needed because of LuaLaTeX
+\newcommand\textlcsc[1]{\textsc{\MakeTextLowercase{#1}}}
+\renewcommand{\allcaps}[1]{\lsstyle{\MakeTextUppercase{#1}}}
+\renewcommand{\allcapsspacing}[1]{\lsstyle{#1}}
+\renewcommand{\smallcapsspacing}[1]{\lsstyle{#1}}
+\renewcommand{\smallcaps}[1]{\smallcapsspacing{\scshape\MakeTextLowercase{#1}}}
+
+% Table of content
+\makeatletter
+\renewcommand{\cftpartfont}{\color{ceruleanblue}\large\lsstyle} % parts style
+%\renewcommand\cftbeforepartskip{\vskip{}} % vspace after chapter
+\renewcommand{\cftchapfont}{\lsstyle}       % chapters style
+%\renewcommand\cftbeforechapskip{\vskip{}} % vspace before chapter
+\renewcommand\cftpartpagefont{\bfseries\color{tyrianpurple}}
+\renewcommand\cftchappagefont{\bfseries\color{tyrianpurple}}
+\renewcommand\cftsecpagefont{\color{tyrianpurple}}
+\renewcommand\cftsubsecpagefont{\color{tyrianpurple}}
+\renewcommand\cftfigpagefont{\color{tyrianpurple}}
+\renewcommand\cfttabpagefont{\color{tyrianpurple}}
+                                            % numbers style
+\renewcommand{\@cftmaketoctitle}{}          % remove toc title
+\renewcommand{\@cftmakeloftitle}{}          % remove lof title
+\renewcommand{\@cftmakelottitle}{}          % remove lot title
+\makeatother
+
+% Lists
+\renewcommand\labelitemi{\adforn{43}}
+
+\renewcommand{\bibsection}{}
+

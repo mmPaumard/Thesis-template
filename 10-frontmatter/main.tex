@@ -1,0 +1,32 @@
+\input{10-frontmatter/11-title1}
+%\input{10-frontmatter/11-title2} % ← Sorbone Université front page template
+
+\begin{fullwidth}
+    {\fancypagestyle{plain}{}
+    \pagenumbering{roman}
+    \input{10-frontmatter/12-ack}
+    \input{10-frontmatter/14-resume}
+    \input{10-frontmatter/13-abstract}
+    \input{10-frontmatter/15-publications}}
+    
+    {
+    \hypersetup{linkcolor=black}
+    \chapter*{Contents}
+    \tableofcontents
+    
+    \listofplates
+    \chapter*{List of Figures}
+    \listoffigures
+    \chapter*{List of Tables}
+    \listoftables
+%    \chapter*{List of Algorithms}
+%    \listofalgorithms
+%    \addcontentsline{toc}{section}{List of Algorithms}
+    %\listofsymbols
+    
+    \chapter*{List of Terms and Acronyms}
+    \printglossaries
+    }
+    
+
+\end{fullwidth}

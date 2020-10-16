@@ -1,0 +1,61 @@
+\ProvidesPackage{layout}
+
+% Header and Footer styles
+\fancypagestyle{frontmatter}{%
+    \fancyhead{}
+    \renewcommand{\headrulewidth}{0pt}
+}
+\fancypagestyle{content}{%
+    \fancyhead{}
+    \renewcommand{\headrulewidth}{0pt}
+}
+\fancypagestyle{mainmatter}{%
+    \fancyhead{}
+    \renewcommand{\headrulewidth}{0pt}
+}
+\fancypagestyle{backmatter}{%
+    \fancyhead{}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+%Parts
+\titleformat{\part}[display]
+    {\filcenter\huge\bfseries}              % global style
+    {\partname~\thepart}                    % label style
+    {10pt}                                  % space after number
+    {\color{ceruleanblue}\MakeUppercase}    % chapter title style
+
+%Chapters
+\titleformat{\chapter}[display]
+    {}                                      % global style
+    {\fontsize{70}{10}\selectfont\bfseries\thechapter}% label style
+    {10pt}                                  % space after number
+    {\color{chaptergray}\itshape\Huge}      % chapter title style
+\titlespacing*{\chapter}{0pt}{0pt}{15pt}    % space after title
+
+%Sections
+\titleformat{\section}[hang]
+    {}              % global style
+    {\llap{\thesection}} % label style
+    {\marginparsep}                          % space after number
+    {\lsstyle\textlcsc}   % chapter title style
+\titlespacing*{\section}{-\marginparsep}{16pt}{16pt}
+
+%Subsections
+\titleformat{\subsection}[hang]
+    {}              % global style
+    {\llap{\thesubsection}} % label style
+    {\marginparsep}                          % space after number
+    {\itshape}   % chapter title style
+\titlespacing*{\subsection}{-\marginparsep}{16pt}{16pt}
+
+%Paragraphs
+\titleformat{\paragraph}[runin]
+    {}              % global style
+    {} % label style
+    {}                          % space after number
+    {\textsc}   % chapter title style
+
+% Table of contents
+\setcounter{tocdepth}{3}                    % displays subsections
+\setcounter{secnumdepth}{3}                 % give number to subsections

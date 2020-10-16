@@ -1,0 +1,17 @@
+\documentclass[a4paper, justified, nols, openany, twoside]{config/tufte-book}
+\usepackage{config/packages}    % add packages
+\usepackage{config/style}       % change fonts, colors and hyphenation
+\usepackage{config/glossary}    % add glossary terms and acronyms
+\usepackage{config/plate}
+\usepackage{config/commands}    
+\usepackage{config/layout}
+
+\begin{document}
+    \input{10-frontmatter/main}
+    \pagenumbering{arabic}
+    \input{20-prologue/main}
+    \input{30-part1/main}
+    \input{40-part2/main}
+    \input{50-epilogue/main}
+    \input{60-backmatter/main}
+\end{document}
